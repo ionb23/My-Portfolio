@@ -3,8 +3,10 @@
   --bright-turquoise: #2aefcb;
   --gin: #e0eae4;
   --heliotrope: #e866ec;
-  --text: #E5DDE5;
-  --bg: #1A757D;
+  --body-bg: #CEC7D9;
+  --body-text: #06645c;
+  --header-bg: #de8964;
+  --header-text: #276183;
 }
 
 /* set content highlight color and background */
@@ -25,29 +27,50 @@ html {
 #navBar {
   display: flex;
   flex-direction: row;
-  margin: 0px 5%;
+  margin: 0;
+  height: 70px;
+  background-color: var(--header-bg);
+  color: var(--header-text);
 }
 #navBar h1 {
+  display: flex;
   width: 25%;
-  font-weight: 500;
-  color: white;
+  max-width: 250px;
+  padding: 10px;
+  border-top: solid 7px;
+  border-bottom: solid 7px;
+  border-right: solid 7px;
+  font-weight: 1000;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: right;
+  border-color: var(--header-bg);
+  background-color: var(--header-text);
+  color: var(--header-bg);
 }
 #navigation {
   display: flex;
-  width: 50%;
+  width: 75%;
+  padding-right: 50px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 }
 #navigation p {
   cursor: pointer;
   text-decoration: none;
+  padding: 15px;
+  font-size: 1.7rem;
+  text-decoration: underline var(--header-text) solid 3px;
+  text-underline-offset: 5px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
+  background-color: var(--body-bg);
+  color: var(--body-text);
 }
 
 h1,
