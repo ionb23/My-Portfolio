@@ -95,7 +95,7 @@ p {
   margin: 0;
   display: grid;
   min-height: 500px;
-  /*height: 70vh;*/
+  height: 70vh;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas:
@@ -121,12 +121,20 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border-right: solid 3px var(--header-text);
   flex-wrap: wrap;
-  padding-left: 90px;
-  padding-right: 10px;
   text-align: right;
   justify-content: space-between;
+}
+
+/* change this from h1 to the actual right side stuff once we add the images*/
+#sectionTitle h1 {
+  border-right: solid 3px var(--header-text);
+  padding-left: 92px;
+  padding-right: 8px;
+}
+
+#about {
+  grid-area: about;
 }
 
 #app1 {
