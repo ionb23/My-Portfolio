@@ -106,9 +106,9 @@ li {
   grid-template-areas:
   "banner banner"
   "about about"
-  "work work"
-  "work work"
-  "work work"
+  "workGrid workGrid"
+  "workGrid workGrid"
+  "workGrid workGrid"
   "contact contact"
   ;
 }
@@ -150,26 +150,38 @@ li {
   padding-top: 5px;
   padding-bottom: 10px;
   padding-left: 25px;
-
 }
 
-/* 
-  "banner banner banner"
-  "about about about"
+#workGrid {
+  grid-area: workGrid;
+  margin: 0;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-gap: 15px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-areas:
   "sectionTitle app1 app1"
   "sectionTitle app2 app3"
   "sectionTitle app4 app5"
-  "sectionTitle contact contact"
   ;
-*/
+}
 
-#work {
-  grid-area: work;
+.workGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+
 }
 
 #app1 {
   grid-area: app1;
   background-image: url("../images/02-portfolio-1.jpg");
+  height: 50vh;
 }
 
 #app2 {
@@ -192,16 +204,21 @@ li {
   background-image: url("../images/02-run-buddy.jpg");
 }
 
-#contact {
-  grid-area: contact;
-  display:flex;
+#app1, #app2, #app3, #app4, #app5 {
+  border: solid 5px var(--header-text);
+}
 
+#app2, #app3, #app4, #app5 {
+  height: 30vh;
 }
 
 
+#contact {
+  grid-area: contact;
+  display: flex;
+}
 
 #contact li {
-  display: flex;
   align-items: center;
   justify-content: space-around;
 }
