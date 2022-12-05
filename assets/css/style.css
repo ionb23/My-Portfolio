@@ -1,8 +1,8 @@
 :root {
-  --color1: rgba(206,199,217,1);
-  --color2: rgba(6,100,92,1);
-  --color3: rgba(222,137,100,1);
-  --color4: rgba(39,97,131,1);
+  --color1: rgba(221, 208, 200, 1);
+  --color2: rgba(71, 102, 137, 1);
+  --color3: rgb(22, 77, 104);
+  --color4: rgb(113, 181, 210);
 }
 
 html {
@@ -53,7 +53,6 @@ h3 {
   padding-right: 5px;
 }
 
-
 p,
 a {
   margin: 0;
@@ -64,7 +63,7 @@ a {
   display: flex;
   flex-direction: row;
   margin: 0;
-  height: 60px;
+  height: 80px;
   background-color: var(--color3);
   color: var(--color4);
   justify-content: space-between;
@@ -90,7 +89,7 @@ ul {
   text-decoration: none;
   list-style: none;
   padding: 10px;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   text-decoration: underline var(--color4) solid 3px;
   text-underline-offset: 5px;
   display: flex;
@@ -140,6 +139,40 @@ ul {
   background-image: url("../images/02-hero-bg.jpg");
   margin: 0;
   height: 200px;
+  min-height: 20vh;
+  max-height: 30vh;
+  position: relative;
+}
+
+#banner div {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  z-index: 1;
+}
+
+#banner h2 {
+  font-size: 2.5rem;
+  background-color: var(--color4);
+  color: var(--color3);
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#navBar h1 {
+  display: flex;
+  width: 25%;
+  max-width: 250px;
+  padding: 10px;
+  border-top: solid 7px;
+  border-bottom: solid 7px;
+  border-right: solid 7px;
+  align-items: center;
+  justify-content: right;
+  border-color: var(--color3);
+  background-color: var(--color4);
+  color: var(--color3);
 }
 
 #aboutTitle,
@@ -152,7 +185,13 @@ ul {
   align-items: flex-end;
   flex-wrap: wrap;
   text-align: right;
-  border-right: solid 4px var(--color4);
+  border-right: solid 4px var(--color2);
+}
+
+#aboutTitle h1,
+#workTitle h1,
+#contactTitle h1 {
+  width: 110px;
 }
 
 #aboutTitle {
@@ -186,7 +225,7 @@ ul {
 #app4,
 #app5 {
   border: solid 5px var(--color4);
-  opacity:0.5;
+  opacity: 0.5;
   transition: 0.4s ease-in-out;
 }
 
@@ -195,7 +234,7 @@ ul {
 #app3:hover,
 #app4:hover,
 #app5:hover {
-  opacity:1;
+  opacity: 1;
 }
 
 #app2,
@@ -268,8 +307,104 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 #contact li {
   padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  #navBar h1 {
+    color: red;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  #contact ul {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+/* media query for larger screens */
+@media only screen and (max-width: 600px) {
+  #navBar h1 {
+    color: white;
+    width: 35%;
+  }
+
+  #heroGrid {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "banner         banner"
+      "aboutTitle     about"
+      "workTitle      app1"
+      "workTitle      app2"
+      "workTitle      app3"
+      "workTitle      app4"
+      "workTitle      app5"
+      "contactTitle   contact"
+    ;
+  }
+
+  #aboutTitle,
+  #workTitle,
+  #contactTitle {
+   margin-left: 0px;
+    width: 70%;
+  }
+
+
+
+  
+  #aboutTitle h1,
+  #workTitle h1,
+  #contactTitle h1 {
+    width: 90px;
+  }
+
+  #navBar ul {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #banner h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    font-size: 1.5rem;
+  }
+
+  #app1,
+  #app2,
+  #app3,
+  #app4,
+  #app5 {
+    margin: 0;
+    margin-left: 25px;
+    padding: 0;
+  }
+
+  #about p {
+    margin: 0;
+    padding: 0;
+    margin-right: 25px;
+  }
 }
