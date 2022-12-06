@@ -64,6 +64,7 @@ a:hover,
 a:active {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 #navBar {
@@ -92,7 +93,6 @@ a:active {
 }
 
 ul {
-  cursor: pointer;
   text-decoration: none;
   list-style: none;
   padding: 10px;
@@ -303,6 +303,7 @@ ul {
   background-color: var(--color3);
   color: var(--color4);
   opacity: 1 !important;
+  z-index: 1;
 }
 
 #contact {
