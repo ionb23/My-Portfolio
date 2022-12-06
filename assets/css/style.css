@@ -53,10 +53,14 @@ h3 {
   padding-right: 5px;
 }
 
-p,
-a {
+p {
   margin: 0;
   font-size: 1.5rem;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 #navBar {
@@ -306,12 +310,16 @@ ul {
 #contact ul {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
 #contact li {
   padding: 10px;
+}
+
+#contact a {
+  text-decoration: underline var(--color4) solid 3px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -359,9 +367,6 @@ ul {
     width: 70%;
   }
 
-
-
-  
   #aboutTitle h1,
   #workTitle h1,
   #contactTitle h1 {
