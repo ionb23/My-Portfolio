@@ -6,7 +6,8 @@
 }
 
 html {
-  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page
+  (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
   font-size: 62.5%;
 }
 
@@ -58,6 +59,7 @@ p {
   font-size: 1.5rem;
 }
 
+/*removing default link styling and adding pointer cursor on link hover*/
 a,
 a:visited,
 a:hover,
@@ -113,7 +115,7 @@ ul {
   padding: 10px;
 }
 
-/* defining grid with all inner elements*/
+/* defining large screen grid with all inner elements*/
 #heroGrid {
   margin: 0;
   display: grid;
@@ -326,6 +328,7 @@ ul {
   text-decoration: underline var(--color4) solid 3px;
 }
 
+/*media query for medium screens*/
 @media only screen and (max-width: 1000px) {
 
   h1 {
@@ -338,9 +341,10 @@ ul {
   }
 }
 
-/* media query for larger screens */
+/* media query for small screens */
 @media only screen and (max-width: 600px) {
 
+  /*realigning grid for smaller screens*/
   #heroGrid {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 3fr;
