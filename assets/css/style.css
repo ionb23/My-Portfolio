@@ -58,7 +58,10 @@ p {
   font-size: 1.5rem;
 }
 
-a, a:visited, a:hover, a:active {
+a,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -324,10 +327,6 @@ ul {
 
 @media only screen and (max-width: 1000px) {
 
-  #navBar h1 {
-    color: red;
-  }
-
   h1 {
     font-size: 2.6rem;
   }
@@ -340,14 +339,10 @@ ul {
 
 /* media query for larger screens */
 @media only screen and (max-width: 600px) {
-  #navBar h1 {
-    color: white;
-    width: 35%;
-  }
 
   #heroGrid {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
       "banner         banner"
       "aboutTitle     about"
@@ -360,33 +355,12 @@ ul {
     ;
   }
 
-  #aboutTitle,
-  #workTitle,
-  #contactTitle {
-   margin-left: 0px;
-    width: 70%;
-  }
-
-  #aboutTitle h1,
-  #workTitle h1,
-  #contactTitle h1 {
-    width: 90px;
-  }
-
-  #navBar ul {
-    padding: 0;
-  }
-
   h1 {
     font-size: 2rem;
   }
 
   h2 {
     font-size: 1.5rem;
-  }
-
-  #banner h2 {
-    font-size: 2rem;
   }
 
   h3 {
@@ -397,16 +371,38 @@ ul {
     font-size: 1.5rem;
   }
 
+  #navBar h1 {
+    width: 35%;
+    font-size: 2.2rem;
+  }
+
+  #navBar ul {
+    padding: 0;
+    justify-content: center;
+  }
+
+  #banner h2 {
+    font-size: 2rem;
+  }
+
+  #aboutTitle,
+  #workTitle,
+  #contactTitle {
+    margin-left: 0px;
+    width: 85%;
+  }
+
+  #aboutTitle h1,
+  #workTitle h1,
+  #contactTitle h1 {
+    width: 90px;
+  }
+
   #app1,
   #app2,
   #app3,
   #app4,
-  #app5 {
-    margin: 0;
-    margin-left: 25px;
-    padding: 0;
-  }
-
+  #app5,
   #about p {
     margin: 0;
     padding: 0;
